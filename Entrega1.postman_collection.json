@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "91ae52bb-d947-4013-83ef-b5186e438377",
+		"name": "Entrega1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44891885"
+	},
+	"item": [
+		{
+			"name": "Enviar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVenda\":\"2025-12-14\",\r\n    \"valorVenda\": 45778,\r\n    \"vendedor\":{\r\n        \"codigoVendedor\":574,\r\n        \"tipo_vendedor\":\"autonomo\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}lancamentos",
+					"host": [
+						"{{url}}lancamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}lancamentos/1",
+					"host": [
+						"{{url}}lancamentos"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8080/",
+			"type": "string"
+		}
+	]
+}
